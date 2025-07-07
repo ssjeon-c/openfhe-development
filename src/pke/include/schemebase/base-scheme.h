@@ -54,6 +54,7 @@
 #include <string>
 #include <memory>
 #include <utility>
+#include <scheme/ckksrns/ckksrns-fhe.h>
 
 /**
  * @namespace lbcrypto
@@ -78,7 +79,7 @@ class SchemeBase {
     using DggType  = typename Element::DggType;
     using TugType  = typename Element::TugType;
 
-protected:
+public:
     inline void CheckMultipartyDecryptCompatibility(ConstCiphertext<Element>& ciphertext, CALLER_INFO_ARGS_HDR) const {
         if (ciphertext->NumberCiphertextElements() > 2) {
             std::string errorMsg(std::string("ciphertext's number of elements is [") +
@@ -1410,6 +1411,15 @@ public:
 
     // SCHEMESWITCHING methods
 
+    std::pair<Ciphertext<Element>, Ciphertext<Element>> EvalBootstrapDensePartial(ConstCiphertext<Element> ciphertext,
+                                                                                  uint32_t numIterations = 1,
+                                                                                  uint32_t precision     = 0) const {
+        VerifyFHEEnabled(__func__);
+
+        return dynamic_cast<lbcrypto::FHECKKSRNS*>(m_FHE.get())
+            ->EvalBootstrapDensePartial(ciphertext, numIterations, precision);
+    }
+
     LWEPrivateKey EvalCKKStoFHEWSetup(const SchSwchParams& params) {
         VerifySchemeSwitchEnabled(__func__);
         return m_SchemeSwitch->EvalCKKStoFHEWSetup(params);
@@ -1711,7 +1721,7 @@ public:
         return out;
     }
 
-protected:
+public:
     std::shared_ptr<ParameterGenerationBase<Element>> m_ParamsGen;
     std::shared_ptr<PKEBase<Element>> m_PKE;
     std::shared_ptr<KeySwitchBase<Element>> m_KeySwitch;

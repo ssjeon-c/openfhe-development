@@ -5,6 +5,14 @@
 # all files named *.cpp are compiled to form the library
 file (GLOB BINFHE_SRC_FILES CONFIGURE_DEPENDS lib/*.cpp)
 
+# Hook headers inclusion
+list(APPEND BINFHE_INCLUDE_DIRS 
+		"${CMAKE_CURRENT_SOURCE_DIR}/../hook"
+		#"${CMAKE_CURRENT_SOURCE_DIR}/../core/include"
+		#"${CMAKE_CURRENT_SOURCE_DIR}/../pke/include"
+		#"${CMAKE_CURRENT_SOURCE_DIR}/../binfhe/include"
+)
+
 include_directories(${CORE_INCLUDE_DIRS})
 list(APPEND BINFHE_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/include")
 list(APPEND BINFHE_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/lib")
@@ -16,6 +24,7 @@ set(BINFHE_VERSION_PATCH ${OPENFHE_VERSION_PATCH})
 set(BINFHE_VERSION ${BINFHE_VERSION_MAJOR}.${BINFHE_VERSION_MINOR}.${BINFHE_VERSION_PATCH})
 
 add_library(binfheobj OBJECT ${BINFHE_SRC_FILES})
+add_dependencies(binfheobj OPENFHEhook_static) # Hook dependency
 set_property(TARGET binfheobj PROPERTY POSITION_INDEPENDENT_CODE 1)
 
 if ( BUILD_SHARED )

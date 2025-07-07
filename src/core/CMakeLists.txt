@@ -5,6 +5,13 @@
 # all files named *.c or */cpp are compiled to form the library
 file (GLOB_RECURSE CORE_SRC_FILES CONFIGURE_DEPENDS lib/*.c lib/*.cpp lib/utils/*.cpp)
 
+# Hook headers inclusion
+list(APPEND CORE_INCLUDE_DIRS
+		"${CMAKE_CURRENT_SOURCE_DIR}/../hook"
+		"${CMAKE_CURRENT_SOURCE_DIR}/../pke/include"
+		"${CMAKE_CURRENT_SOURCE_DIR}/../binfhe/include"
+)
+
 list(APPEND CORE_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/include")
 list(APPEND CORE_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/lib")
 include_directories(${CORE_INCLUDE_DIRS})
@@ -17,7 +24,7 @@ set(CORE_VERSION_PATCH ${OPENFHE_VERSION_PATCH})
 set(CORE_VERSION ${CORE_VERSION_MAJOR}.${CORE_VERSION_MINOR}.${CORE_VERSION_PATCH})
 
 add_library(coreobj OBJECT ${CORE_SRC_FILES})
-add_dependencies(coreobj third-party)
+add_dependencies(coreobj third-party OPENFHEhook_static) # Hook dependency
 
 set_property(TARGET coreobj PROPERTY POSITION_INDEPENDENT_CODE 1)
 

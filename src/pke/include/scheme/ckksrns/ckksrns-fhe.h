@@ -150,6 +150,15 @@ public:
 
     void EvalBootstrapPrecompute(const CryptoContextImpl<DCRTPoly>& cc, uint32_t slots) override;
 
+    Ciphertext<DCRTPoly> EvalBootstrapNoStC(ConstCiphertext<DCRTPoly> ciphertext, uint32_t numIterations,
+                                            uint32_t precision) const;
+
+    std::pair<Ciphertext<DCRTPoly>, Ciphertext<DCRTPoly>> EvalBootstrapDensePartial(
+        ConstCiphertext<DCRTPoly> ciphertext, uint32_t numIterations, uint32_t precision) const;
+
+    Ciphertext<DCRTPoly> EvalBootstrapSetupOnly(ConstCiphertext<DCRTPoly> ciphertext, uint32_t numIterations,
+                                                uint32_t precision) const;
+
     Ciphertext<DCRTPoly> EvalBootstrap(ConstCiphertext<DCRTPoly> ciphertext, uint32_t numIterations,
                                        uint32_t precision) const override;
 
@@ -171,13 +180,14 @@ public:
 
     std::vector<ConstPlaintext> EvalLinearTransformPrecompute(const CryptoContextImpl<DCRTPoly>& cc,
                                                               const std::vector<std::vector<std::complex<double>>>& A,
-                                                              double scale = 1, uint32_t L = 0) const;
+                                                              double scale = 1, uint32_t L = 0,
+                                                              bool extended = true) const;
 
     std::vector<ConstPlaintext> EvalLinearTransformPrecompute(const CryptoContextImpl<DCRTPoly>& cc,
                                                               const std::vector<std::vector<std::complex<double>>>& A,
                                                               const std::vector<std::vector<std::complex<double>>>& B,
                                                               uint32_t orientation = 0, double scale = 1,
-                                                              uint32_t L = 0) const;
+                                                              uint32_t L = 0, bool extended = true) const;
 
     std::vector<std::vector<ConstPlaintext>> EvalCoeffsToSlotsPrecompute(const CryptoContextImpl<DCRTPoly>& cc,
                                                                          const std::vector<std::complex<double>>& A,
@@ -231,7 +241,7 @@ public:
         return "FHECKKSRNS";
     }
 
-private:
+public:
     //------------------------------------------------------------------------------
     // Auxiliary Bootstrap Functions
     //------------------------------------------------------------------------------
@@ -279,7 +289,7 @@ private:
     void FitToNativeVector(uint32_t ringDim, const std::vector<int128_t>& vec, int128_t bigBound,
                            NativeVector* nativeVec) const;
 #endif
-
+public:
     const uint32_t K_SPARSE  = 28;   // upper bound for the number of overflows in the sparse secret case
     const uint32_t K_UNIFORM = 512;  // upper bound for the number of overflows in the uniform secret case
     static const uint32_t R_UNIFORM =

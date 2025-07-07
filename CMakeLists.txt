@@ -50,23 +50,12 @@ endif()
 
 message(STATUS "Building in ${CMAKE_BUILD_TYPE} mode" )
 
-if ( EMSCRIPTEN )
-    set(BUILD_SHARED OFF)
-    message( "Shared library is not supported by Emscripten")
-    option( BUILD_STATIC "Set to ON to build static versions of the library"         ON  )
-    option( BUILD_UNITTESTS "Set to ON to build unit tests for the library"          OFF )
-    option( BUILD_EXAMPLES "Set to ON to build examples for the library"             OFF )
-    option( BUILD_BENCHMARKS "Set to ON to build benchmarks for the library"         OFF )
-    set(WITH_OPENMP OFF)
-    message( "OpenMP is not supported by Emscripten" )
-else()
-    option( BUILD_SHARED "Set to ON to build shared versions of the library"         ON  )
-    option( BUILD_STATIC "Set to ON to build static versions of the library"         OFF )
-    option( BUILD_UNITTESTS "Set to ON to build unit tests for the library"          ON  )
-    option( BUILD_EXAMPLES "Set to ON to build examples for the library"             ON  )
-    option( BUILD_BENCHMARKS "Set to ON to build benchmarks for the library"         ON  )
-    option( WITH_OPENMP "Use OpenMP to enable <omp.h>"                               ON  )
-endif()
+option( BUILD_SHARED "Set to ON to build shared versions of the library"         ON  )
+option( BUILD_STATIC "Set to ON to build static versions of the library"         ON  ) # Set static build as it is needed
+option( BUILD_UNITTESTS "Set to ON to build unit tests for the library"          OFF  )
+option( BUILD_EXAMPLES "Set to ON to build examples for the library"             OFF  )
+option( BUILD_BENCHMARKS "Set to ON to build benchmarks for the library"         OFF  )
+option( WITH_OPENMP "Use OpenMP to enable <omp.h>"                               ON  )
 
 option( BUILD_EXTRAS "Set to ON to build extras for the library"                     OFF )
 option( GIT_SUBMOD_AUTO "Submodules auto-update"                                     ON  )
@@ -186,11 +175,11 @@ if(WITH_COVTEST)
 endif()
 
 if(BUILD_STATIC)
-    set(OpenFHE_STATIC_LIBS OPENFHEcore_static OPENFHEpke_static OPENFHEbinfhe_static)
+    set(OpenFHE_STATIC_LIBS OPENFHEcore_static OPENFHEpke_static OPENFHEbinfhe_static OPENFHEhook_static) # Add hook build
 endif()
 
 if(BUILD_SHARED)
-    set(OpenFHE_SHARED_LIBS OPENFHEcore OPENFHEpke OPENFHEbinfhe)
+    set(OpenFHE_SHARED_LIBS OPENFHEcore OPENFHEpke OPENFHEbinfhe OPENFHEhook) # Add hook build
 endif()
 
 set(OpenFHE_PACKAGE_LIBS ${OpenFHE_STATIC_LIBS} ${OpenFHE_SHARED_LIBS})
@@ -658,6 +647,10 @@ if( BUILD_UNITTESTS )
 endif()
 
 ### add each of the subdirs of src
+
+# Add the hook library
+add_subdirectory(src/hook)
+
 add_subdirectory(src/core)
 add_subdirectory(src/pke)
 add_subdirectory(src/binfhe)
