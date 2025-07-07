@@ -275,7 +275,7 @@ class UTCKKSRNS_EVAL_POLY : public ::testing::TestWithParam<TEST_CASE_UTCKKSRNS_
     // This is necessary because CKKS works for approximate numbers.
     const double eps = 0.001;
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

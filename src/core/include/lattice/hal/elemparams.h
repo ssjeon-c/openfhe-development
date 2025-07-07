@@ -255,7 +255,7 @@ public:
         return 1;
     }
 
-protected:
+public:
     uint32_t m_ringDimension{0};
     uint32_t m_cyclotomicOrder{0};
     IntegerType m_ciphertextModulus{0};

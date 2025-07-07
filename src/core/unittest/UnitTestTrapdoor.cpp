@@ -42,7 +42,7 @@
 using namespace lbcrypto;
 
 class UnitTestTrapdoor : public ::testing::Test {
-protected:
+public:
     virtual void SetUp() {}
 
     virtual void TearDown() {

@@ -47,7 +47,7 @@
 using namespace lbcrypto;
 
 class UTGENERAL_MULTIHOP_PRE : public ::testing::TestWithParam<uint32_t> {
-protected:
+public:
     int run_demo_pre(uint32_t security_model, uint32_t num_of_hops) {
         // Generate parameters.
         PlaintextModulus plaintextModulus{2};

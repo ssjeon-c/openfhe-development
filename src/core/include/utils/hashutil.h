@@ -65,7 +65,7 @@ public:
 
     static std::string HashString(std::string message);
 
-private:
+public:
     static void SHA256(std::string message, std::vector<int64_t>& digest);
     static void SHA512(std::string message, std::vector<int64_t>& digest);
     static const uint32_t k_256[64];

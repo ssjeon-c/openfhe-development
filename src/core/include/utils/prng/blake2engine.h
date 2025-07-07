@@ -135,7 +135,7 @@ class Blake2Engine {
     m_bufferIndex = other.m_bufferIndex;
   }
 
- private:
+ public:
   /**
    * @brief The main call to blake2xb function
    */

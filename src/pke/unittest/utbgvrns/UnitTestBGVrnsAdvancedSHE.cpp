@@ -119,7 +119,7 @@ static std::vector<TEST_CASE_UTBGVRNS_SHEADVANCED> testCasesUTBGVRNS_SHEADVANCED
 class UTBGVRNS_SHEADVANCED : public ::testing::TestWithParam<TEST_CASE_UTBGVRNS_SHEADVANCED> {
     using Element = DCRTPoly;
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

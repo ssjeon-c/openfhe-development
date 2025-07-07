@@ -481,7 +481,7 @@ std::vector<LWECiphertext> BinFHEScheme::EvalDecomp(const std::shared_ptr<BinFHE
     return ret;
 }
 
-// private:
+// public:
 
 RLWECiphertext BinFHEScheme::BootstrapGateCore(const std::shared_ptr<BinFHECryptoParams>& params, BINGATE gate,
                                                ConstRingGSWACCKey& ek, ConstLWECiphertext& ct) const {

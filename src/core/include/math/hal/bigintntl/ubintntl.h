@@ -1068,7 +1068,7 @@ public:
         return 1;
     }
 
-private:
+public:
     // adapter kits
     void SetMSB();
 

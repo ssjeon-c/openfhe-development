@@ -62,7 +62,7 @@ namespace lbcrypto {
  * It provides virtual methods for encoding and decoding of data.
  */
 class PlaintextImpl {
-protected:
+public:
     enum PtxtPolyType { IsPoly, IsDCRTPoly, IsNativePoly };
 
     bool isEncoded;

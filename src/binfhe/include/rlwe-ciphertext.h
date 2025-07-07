@@ -121,7 +121,7 @@ public:
         return 1;
     }
 
-private:
+public:
     std::vector<NativePoly> m_elements;
 };
 

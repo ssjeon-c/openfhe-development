@@ -617,7 +617,7 @@ public:
         return this->GetDerived().GetElementName();
     }
 
-protected:
+public:
     /**
    * @brief ostream operator
    * @param os the input preceding output stream

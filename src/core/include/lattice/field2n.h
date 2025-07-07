@@ -55,7 +55,7 @@ namespace lbcrypto {
  * @brief A class to represent field elements with power-of-2 dimension.
  */
 class Field2n : public std::vector<std::complex<double>>, public Serializable {
-private:
+public:
     // Format of the field element
     Format format{Format::COEFFICIENT};
 

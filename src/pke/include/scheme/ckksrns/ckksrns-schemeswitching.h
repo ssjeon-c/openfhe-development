@@ -184,7 +184,7 @@ public:
         return "SWITCHCKKSRNS";
     }
 
-private:
+public:
     std::vector<ConstPlaintext> EvalLTPrecomputeSwitch(const CryptoContextImpl<DCRTPoly>& cc,
                                                        const std::vector<std::vector<std::complex<double>>>& A,
                                                        uint32_t dim1, uint32_t L, double scale) const;

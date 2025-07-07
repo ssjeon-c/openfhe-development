@@ -51,7 +51,7 @@ namespace lbcrypto {
  */
 template <typename Element>
 class CryptoObject {
-protected:
+public:
     CryptoContext<Element> context;  // crypto context belongs to the tag used to find the evaluation key needed
                                      // for SHE/FHE operations
     std::string keyTag;

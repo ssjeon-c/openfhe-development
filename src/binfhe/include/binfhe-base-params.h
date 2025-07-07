@@ -123,7 +123,7 @@ public:
         return 1;
     }
 
-private:
+public:
     // shared pointer to an instance of LWECryptoParams
     std::shared_ptr<LWECryptoParams> m_LWEParams{nullptr};
 

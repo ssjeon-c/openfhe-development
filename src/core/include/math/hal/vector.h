@@ -469,7 +469,7 @@ public:
    */
     T GetDigitAtIndexForBase(usint index, usint base) const;
 
-protected:
+public:
     ~BigVectorInterface() = default;
 
     // STRINGS & STREAMS

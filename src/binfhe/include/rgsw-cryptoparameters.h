@@ -229,7 +229,7 @@ public:
         }
     }
 
-private:
+public:
     // modulus for the RingGSW/RingLWE scheme
     NativeInteger m_Q{};
 

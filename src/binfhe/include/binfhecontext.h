@@ -445,7 +445,7 @@ public:
         return NativeInteger(128);
     }
 
-private:
+public:
     // Shared pointer to Ring GSW + LWE parameters
     std::shared_ptr<BinFHECryptoParams> m_params{nullptr};
 

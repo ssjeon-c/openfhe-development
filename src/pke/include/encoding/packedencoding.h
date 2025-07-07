@@ -199,7 +199,7 @@ public:
         out << " ... )";
     }
 
-private:
+public:
     // initial root of unity for plaintext space
     static std::map<ModulusM, NativeInteger> m_initRoot;
     // modulus and root of unity to be used for Arbitrary CRT

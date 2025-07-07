@@ -200,7 +200,7 @@ public:
         ciphertext->SetMetadataByKey("test", mdata);
     }
 
-protected:
+public:
     std::string m_s;
 };
 

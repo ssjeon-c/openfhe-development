@@ -470,7 +470,7 @@ public:
     // unity as key.
     static std::map<ModulusRootPair<IntType>, VecType> m_RBTableByModulusRootPair;
 
-private:
+public:
     // map to store the precomputed NTT modulus with modulus as key.
     static std::map<IntType, ModulusRoot<IntType>> m_defaultNTTModulusRoot;
 };
@@ -566,7 +566,7 @@ public:
    */
     VecType InversePolyMod(const VecType& cycloPoly, const IntType& modulus, usint power);
 
-private:
+public:
     /**
    * @brief Padding zeroes to a vector
    * @param &element is the input of type VecType to be padded with zeros.

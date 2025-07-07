@@ -625,7 +625,7 @@ public:
         return 1;
     }
 
-private:
+public:
     enum State { GARBAGE, INITIALIZED };
 
     ubint_el_t m_modulus{};

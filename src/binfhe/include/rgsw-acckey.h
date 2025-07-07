@@ -154,7 +154,7 @@ public:
         return 1;
     }
 
-private:
+public:
     using dim3_t = std::vector<RingGSWEvalKey>;
     using dim2_t = std::vector<dim3_t>;
     using dim1_t = std::vector<dim2_t>;

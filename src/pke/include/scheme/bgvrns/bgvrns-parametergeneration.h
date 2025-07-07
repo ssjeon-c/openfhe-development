@@ -112,7 +112,7 @@ public:
         return "ParameterGenerationBGVRNS";
     }
 
-private:
+public:
     /*
    * Method that computes a security-compliant ring dimension.
    *

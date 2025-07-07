@@ -48,7 +48,7 @@ using namespace lbcrypto;
 
 namespace {
 class UTBFVRNS_AUTOMORPHISM : public ::testing::Test {
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

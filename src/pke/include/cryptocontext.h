@@ -87,6 +87,7 @@ namespace lbcrypto {
  */
 template <typename Element>
 class CryptoContextImpl : public Serializable {
+public:
     using IntType  = typename Element::Integer;
     using ParmType = typename Element::Params;
 
@@ -255,7 +256,7 @@ class CryptoContextImpl : public Serializable {
     // cached evalautomorphism keys, by secret key UID
     static std::map<std::string, std::shared_ptr<std::map<usint, EvalKey<Element>>>> s_evalAutomorphismKeyMap;
 
-protected:
+public:
     // crypto parameters used for this context
     std::shared_ptr<CryptoParametersBase<Element>> params{nullptr};
     // algorithm used; accesses all crypto methods

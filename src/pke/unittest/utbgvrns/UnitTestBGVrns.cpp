@@ -265,7 +265,7 @@ class UTBGVRNS : public ::testing::TestWithParam<TEST_CASE_UTBGVRNS> {
 
     const std::vector<int64_t> vectorOfInts1s{1, 1, 1, 1, 1, 1, 1, 1};  // all 1's
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

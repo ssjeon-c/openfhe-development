@@ -62,7 +62,7 @@
         #include <utility>
         #include <vector>
 
-        // clang-format off
+    // clang-format off
         // TODO: fix shifting issue when limb_t == Dlimb_t
         #if (NATIVEINT >= 64 && defined(HAVE_INT128))
             using expdtype = uint64_t;
@@ -140,7 +140,7 @@ struct DataTypes<uint128_t> {
 
 template <typename limb_t>
 class ubint final : public lbcrypto::BigIntegerInterface<ubint<limb_t>> {
-private:
+public:
     // variable that stores the MOST SIGNIFICANT BIT position in the
     usint m_MSB{0};
     // vector storing the native integers. stored little endian
@@ -922,7 +922,7 @@ public:
         return 1;
     }
 
-private:
+public:
     /**
    * Sets the MSB to the correct value as computed from the internal value.
    */

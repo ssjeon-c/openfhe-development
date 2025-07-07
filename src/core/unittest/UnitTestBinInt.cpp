@@ -60,7 +60,7 @@ extern bool TestNative;
 /************************************************/
 
 class UTBinInt : public ::testing::Test {
-protected:
+public:
 };
 
 template <typename T>

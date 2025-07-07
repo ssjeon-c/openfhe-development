@@ -51,7 +51,7 @@
 using namespace lbcrypto;
 
 class UnitTestBinInt : public ::testing::Test {
-protected:
+public:
     virtual void SetUp() {}
 
     virtual void TearDown() {
@@ -78,7 +78,7 @@ public:
         xfree(memory);
     }
 
-private:
+public:
     void* memory;
 };
 static MyClassStatic myClassStatic;

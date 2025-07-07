@@ -121,7 +121,7 @@ class UTBFVRNS : public ::testing::TestWithParam<TEST_CASE_UTBFVRNS> {
     // This is necessary because BFV works for approximate numbers.
     const double eps = EPSILON;
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

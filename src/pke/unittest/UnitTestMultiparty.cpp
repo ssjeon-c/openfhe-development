@@ -361,7 +361,7 @@ static std::vector<TEST_CASE_UTGENERAL_MULTIPARTY> testCases = {
 class UTGENERAL_MULTIPARTY : public ::testing::TestWithParam<TEST_CASE_UTGENERAL_MULTIPARTY> {
     using Element = DCRTPoly;
 
-protected:
+public:
     void SetUp() {}
     void TearDown() {
         // destroy all staic key maps

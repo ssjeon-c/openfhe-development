@@ -39,7 +39,7 @@
 namespace lbcrypto {
 
 class DataAndLocation {
-protected:
+public:
     CryptoContext<DCRTPoly> cryptoContext{nullptr};
     PublicKey<DCRTPoly> publicKey{nullptr};
     std::shared_ptr<lbcrypto::BinFHEContext> binFHECryptoContext{nullptr};

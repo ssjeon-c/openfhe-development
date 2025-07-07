@@ -619,7 +619,7 @@ class UTCKKSRNS : public ::testing::TestWithParam<TEST_CASE_UTCKKSRNS> {
         OPENFHE_THROW("CalculateApproximationError() is not implemented for this datatype");
     }
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

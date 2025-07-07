@@ -125,7 +125,7 @@ public:
 #endif
     }
 
-private:
+public:
     int machineThreads{1};
 };
 

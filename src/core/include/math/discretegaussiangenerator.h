@@ -190,7 +190,7 @@ public:
    */
     static int64_t GenerateIntegerKarney(double mean, double stddev);
 
-private:
+public:
     // Gyana to add precomputation methods and data members
     // all parameters are set as int because it is assumed that they are used for
     // generating "small" polynomials only

@@ -51,7 +51,7 @@ public:
     XallocInitDestroy();
     ~XallocInitDestroy();
 
-private:
+public:
     static uint32_t refCount;
 };
 #endif  // AUTOMATIC_XALLOCATOR_INIT_DESTROY

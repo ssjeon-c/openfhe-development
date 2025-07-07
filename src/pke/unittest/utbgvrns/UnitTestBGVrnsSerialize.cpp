@@ -158,7 +158,7 @@ class UTBGVRNS_SER : public ::testing::TestWithParam<TEST_CASE_UTBGVRNS_SER> {
     using Element    = DCRTPoly;
     const double eps = EPSILON;
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

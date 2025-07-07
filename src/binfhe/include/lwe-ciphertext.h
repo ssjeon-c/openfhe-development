@@ -155,7 +155,7 @@ public:
         return 1;
     }
 
-private:
+public:
     NativeVector m_a{};
     NativeInteger m_b{};
     NativeInteger m_p = 4;  // pt modulus

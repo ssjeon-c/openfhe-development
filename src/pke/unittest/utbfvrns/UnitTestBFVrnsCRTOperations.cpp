@@ -45,7 +45,7 @@
 using namespace lbcrypto;
 
 class UTBFVRNS_CRT : public ::testing::Test {
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

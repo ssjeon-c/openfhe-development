@@ -128,7 +128,7 @@ public:
         return "ParameterGenerationRNS";
     }
 
-protected:
+public:
     enum DCRT_MODULUS {
         DEFAULT_EXTRA_MOD_SIZE = 20,
         MIN_SIZE               = 14,

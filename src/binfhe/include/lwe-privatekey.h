@@ -111,7 +111,7 @@ public:
         return 1;
     }
 
-private:
+public:
     NativeVector m_s{};
 };
 

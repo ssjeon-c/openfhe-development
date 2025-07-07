@@ -779,7 +779,7 @@ public:
 
     virtual Ciphertext<Element> MorphPlaintext(ConstPlaintext plaintext, ConstCiphertext<Element> ciphertext) const;
 
-protected:
+public:
     /////////////////////////////////////////
     // CORE OPERATIONS
     /////////////////////////////////////////

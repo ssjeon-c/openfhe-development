@@ -495,7 +495,7 @@ public:
         return "CryptoParametersRLWE";
     }
 
-protected:
+public:
     // standard deviation in Discrete Gaussian Distribution
     float m_distributionParameter = 0;
     // standard deviation in Discrete Gaussian Distribution with Flooding

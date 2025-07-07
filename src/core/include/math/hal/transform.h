@@ -254,7 +254,7 @@ public:
    */
     virtual VecType InversePolyMod(const VecType& cycloPoly, const IntType& modulus, usint power) = 0;
 
-private:
+public:
     /**
    * @brief Padding zeroes to a vector
    * @param &element is the input of type VecType to be padded with zeros.

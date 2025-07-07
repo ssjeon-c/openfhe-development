@@ -109,7 +109,7 @@ public:
 
     static void Initialize(uint32_t m, uint32_t nh);
 
-private:
+public:
     static std::complex<double>* rootOfUnityTable;
 
     // structure to keep values precomputed by Initialize() for every cyclotomic order value

@@ -339,7 +339,7 @@ class UTCKKSRNS_BOOT : public ::testing::TestWithParam<TEST_CASE_UTCKKSRNS_BOOT>
         return std::abs(std::log2(maxError));
     }
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

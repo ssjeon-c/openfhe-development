@@ -40,7 +40,7 @@
 using namespace lbcrypto;
 
 class UTGENERAL_CRYPTOCONTEXTS : public ::testing::Test {
-protected:
+public:
     virtual void SetUp() {}
 
     virtual void TearDown() {

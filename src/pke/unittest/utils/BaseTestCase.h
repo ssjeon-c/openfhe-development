@@ -44,7 +44,7 @@
 #include <vector>
 
 struct BaseTestCase {
-private:
+public:
     // std::shared_ptr<lbcrypto::Params> params;
     lbcrypto::SCHEME scheme;
     std::vector<std::string> paramOverrides;

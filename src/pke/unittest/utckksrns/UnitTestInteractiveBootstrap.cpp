@@ -143,7 +143,7 @@ class UTCKKSRNS_INTERACTIVE_BOOT : public ::testing::TestWithParam<TEST_CASE_UTC
         KeyPair<Element> kpShard;  // key-pair shard (pk, sk_i)
     };
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

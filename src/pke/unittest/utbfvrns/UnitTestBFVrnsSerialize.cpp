@@ -39,7 +39,7 @@
 using namespace lbcrypto;
 
 class UTBFVRNS_SER : public ::testing::Test {
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

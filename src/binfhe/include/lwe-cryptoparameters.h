@@ -218,7 +218,7 @@ public:
         return 1;
     }
 
-private:
+public:
     // modulus for the additive LWE scheme
     NativeInteger m_q{};
     // modulus for the RingGSW/RingLWE scheme

@@ -68,7 +68,7 @@ public:
     void EvalAcc(const std::shared_ptr<RingGSWCryptoParams>& params, ConstRingGSWACCKey& ek, RLWECiphertext& acc,
                  const NativeVector& a) const override;
 
-private:
+public:
     /**
    * Key generation for internal Ring GSW as described in https://eprint.iacr.org/2020/086
    *

@@ -152,7 +152,7 @@ public:
         return 1;
     }
 
-private:
+public:
     std::ostream& doprint(std::ostream& out) const override {
         out << "ILParams ";
         ElemParams<IntType>::doprint(out);

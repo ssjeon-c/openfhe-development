@@ -334,7 +334,7 @@ public:
     // Other Methods for Bootstrap
     //------------------------------------------------------------------------------
 
-protected:
+public:
     std::set<uint32_t> GenerateIndices_2n(usint batchSize, usint m) const;
 
     std::set<uint32_t> GenerateIndices2nComplex(usint batchSize, usint m) const;

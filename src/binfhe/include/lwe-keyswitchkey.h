@@ -119,7 +119,7 @@ public:
         return 1;
     }
 
-private:
+public:
     std::vector<std::vector<std::vector<NativeVector>>> m_keyA;
     std::vector<std::vector<std::vector<NativeInteger>>> m_keyB;
 };

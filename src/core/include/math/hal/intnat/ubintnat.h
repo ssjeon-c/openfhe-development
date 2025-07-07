@@ -130,7 +130,7 @@ struct DataTypes<uint128_t> {
  */
 template <typename NativeInt>
 class NativeIntegerT final : public lbcrypto::BigIntegerInterface<NativeIntegerT<NativeInt>> {
-private:
+public:
     NativeInt m_value{0};
 
     // variable to store the maximum value of the integral data type.
@@ -1873,7 +1873,7 @@ public:
         return true;
     }
 
-private:
+public:
     // Computes res -= a;
     static void SubtractD(typeD& res, const typeD& a) {
         if (res.lo < a.lo) {

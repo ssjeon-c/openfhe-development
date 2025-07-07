@@ -695,7 +695,7 @@ public:
         return 1;
     }
 
-private:
+public:
     // utility function to warn if modulus is no good
     // use when argument to function is myT
     void ModulusCheck(std::string msg) const {
@@ -735,7 +735,7 @@ private:
     // enum to store the state of the
     ModulusState m_modulus_state;
 
-protected:
+public:
     bool IndexCheck(size_t index) const {
         return index < this->GetLength();
     }

@@ -291,7 +291,7 @@ public:
 
     Ciphertext<DCRTPoly> Compress(ConstCiphertext<DCRTPoly> ciphertext, size_t towersLeft) const override;
 
-protected:
+public:
     /////////////////////////////////////
     // RNS Core
     /////////////////////////////////////

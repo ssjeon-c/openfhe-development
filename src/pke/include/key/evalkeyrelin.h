@@ -278,7 +278,7 @@ public:
         return 1;
     }
 
-private:
+public:
     // private member to store vector of vector of Element.
     std::vector<std::vector<Element>> m_rKey;
 

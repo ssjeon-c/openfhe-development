@@ -105,7 +105,7 @@ public:
         return m_allocatorMode;
     }
 
-private:
+public:
     /// Push a memory block onto head of free-list.
     /// @param[in]  pMemory - block of memory to push onto free-list
     void Push(void* pMemory);
@@ -136,21 +136,21 @@ class AllocatorPool : public Allocator {
 public:
     AllocatorPool() : Allocator(sizeof(T), Objects, m_memory) {}
 
-private:
+public:
     char m_memory[sizeof(T) * Objects];
 };
 
 // macro to provide header file interface
-#define DECLARE_ALLOCATOR                                   \
-public:                                                     \
-    void* operator new(size_t size) {                       \
-        return _allocator.Allocate(size);                   \
-    }                                                       \
-    void operator delete(void* pObject) {                   \
-        _allocator.Deallocate(pObject);                     \
-    }                                                       \
-                                                            \
-private:                                                    \
+#define DECLARE_ALLOCATOR                 \
+public:                                   \
+    void* operator new(size_t size) {     \
+        return _allocator.Allocate(size); \
+    }                                     \
+    void operator delete(void* pObject) { \
+        _allocator.Deallocate(pObject);   \
+    }                                     \
+                                          \
+public:                                   \
     static Allocator _allocator;
 
 // macro to provide source file interface

@@ -202,7 +202,7 @@ class UTCKKSRNS_NOISE_FLOODING : public ::testing::TestWithParam<TEST_CASE_UTCKK
         cryptoContext->InsertEvalMultKey({evalMultFinal});
     }
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

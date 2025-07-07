@@ -137,7 +137,7 @@ public:
         return static_cast<short>((m_sequence >> (--m_counter)) & 0x1);  // NOLINT
     }
 
-private:
+public:
     uint32_t m_sequence{0};
     uint32_t m_counter{0};
 };
@@ -174,7 +174,7 @@ public:
         return bg->Generate();
     }
 
-private:
+public:
     // all parameters are set as int because it is assumed that they are used for
     // generating "small" polynomials only
     double b_a;
@@ -286,7 +286,7 @@ public:
    */
     ~SamplerCombiner() = default;
 
-private:
+public:
     // Samplers to be combined
     BaseSampler *sampler1, *sampler2;
     // Coefficients that are used for combining
@@ -324,7 +324,7 @@ public:
    */
     ~DiscreteGaussianGeneratorGeneric();
 
-private:
+public:
     /**
    * @brief Subroutine used by Sample C
    * @param center Center of the distribution

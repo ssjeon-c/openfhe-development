@@ -113,7 +113,7 @@ public:
         m_dgg.SetStd(stddev);
     }
 
-protected:
+public:
     double m_stddev;
     std::shared_ptr<ParmType> m_elemparams;
     DggType m_dgg;
@@ -221,7 +221,7 @@ public:
         m_dggLargeSigma = dggLargeSigma;
     }
 
-protected:
+public:
     int64_t m_base;
     size_t m_k;
     bool m_bal;
@@ -240,7 +240,7 @@ public:
     /*
    *@brief Default constructor
    */
-    PerturbationVector() : m_pvector(nullptr){};
+    PerturbationVector() : m_pvector(nullptr) {};
     /*
    *@brief Constructor for perturbation vector
    *@param pvector Vector containing ring elements
@@ -261,7 +261,7 @@ public:
         return m_pvector;
     }
 
-private:
+public:
     // Perturbation vector represented as a vector of ring elements
     std::shared_ptr<Matrix<Element>> m_pvector;
 };

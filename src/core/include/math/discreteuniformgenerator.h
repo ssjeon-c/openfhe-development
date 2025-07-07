@@ -76,7 +76,7 @@ public:
     VecType GenerateVector(const uint32_t size) const;
     VecType GenerateVector(const uint32_t size, const typename VecType::Integer& modulus);
 
-private:
+public:
     typename VecType::Integer m_modulus{};
     uint32_t m_chunksPerValue{};
     uint32_t m_shiftChunk{};

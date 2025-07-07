@@ -139,7 +139,7 @@ static std::vector<TEST_CASE_UTGENERAL_ENCRYPT_DECRYPT> testCases = {
 class UTGENERAL_ENCRYPT_DECRYPT : public ::testing::TestWithParam<TEST_CASE_UTGENERAL_ENCRYPT_DECRYPT> {
     using Element = DCRTPoly;
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

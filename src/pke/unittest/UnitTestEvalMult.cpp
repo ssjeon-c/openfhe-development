@@ -264,7 +264,7 @@ class UTGENERAL_EVALMULT : public ::testing::TestWithParam<TEST_CASE_UTGENERAL_E
     using Element    = DCRTPoly;
     const double eps = EPSILON;
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

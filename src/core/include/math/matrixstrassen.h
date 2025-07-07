@@ -477,7 +477,7 @@ public:
    */
     MatrixStrassen<Element> MultByRandomVector(std::vector<int> ranvec) const;
 
-private:
+public:
     struct MatDescriptor {
         int lda;
         int nrec;

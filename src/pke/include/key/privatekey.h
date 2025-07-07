@@ -177,7 +177,7 @@ public:
         return 1;
     }
 
-private:
+public:
     Element m_sk;
 };
 

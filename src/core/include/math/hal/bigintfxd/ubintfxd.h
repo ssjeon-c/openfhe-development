@@ -1097,7 +1097,7 @@ public:
         return 1;
     }
 
-protected:
+public:
     /**
    * Converts the string v into base-r integer where r is equal to 2^bitwidth of
    * integral data type.
@@ -1117,7 +1117,7 @@ protected:
    */
     void SetMSB(usint guessIdxChar);
 
-private:
+public:
     // array storing the native integers.
     // array size is the ceiling of BITLENGTH/(bits in the integral data type)
     uint_type m_value[(BITLENGTH + 8 * sizeof(uint_type) - 1) / (8 * sizeof(uint_type))];

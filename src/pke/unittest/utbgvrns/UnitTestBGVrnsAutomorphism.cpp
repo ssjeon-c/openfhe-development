@@ -186,7 +186,7 @@ class UTBGVRNS_AUTOMORPHISM : public ::testing::TestWithParam<TEST_CASE_UTBGVRNS
     const usint invalidIndexAutomorphism = 4;
     const int64_t vector8Sum             = std::accumulate(vector8.begin(), vector8.end(), int64_t(0));  // 36
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

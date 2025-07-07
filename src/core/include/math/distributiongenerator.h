@@ -48,7 +48,7 @@
 #include <random>
 #include <thread>
 
-#define FIXED_SEED // if defined, then uses a fixed seed number for
+#define FIXED_SEED  // if defined, then uses a fixed seed number for
 // reproducible results during debug. Use only one OMP thread to ensure
 // reproducibility
 
@@ -177,7 +177,7 @@ public:
         return *m_prng;
     }
 
-private:
+public:
     // shared pointer to a thread-specific PRNG engine
     static std::shared_ptr<PRNG> m_prng;
 

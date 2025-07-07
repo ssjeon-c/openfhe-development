@@ -59,7 +59,7 @@
 using namespace lbcrypto;
 
 class UnitTestBinInt : public ::testing::Test {
-protected:
+public:
     virtual void SetUp() {}
 
     virtual void TearDown() {

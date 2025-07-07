@@ -587,7 +587,7 @@ public:
         return 1;
     }
 
-private:
+public:
     // vector of ring elements for this Ciphertext
     std::vector<Element> m_elements;
 

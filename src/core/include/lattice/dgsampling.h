@@ -154,7 +154,7 @@ public:
     static std::shared_ptr<Matrix<int64_t>> ZSampleF(const Field2n& f, const Field2n& c,
                                                      const typename Element::DggType& dgg, size_t n);
 
-private:
+public:
     // subroutine used by GaussSampGq
     // Discrete sampling variant
     // As described in Figure 2 of https://eprint.iacr.org/2017/308.pdf

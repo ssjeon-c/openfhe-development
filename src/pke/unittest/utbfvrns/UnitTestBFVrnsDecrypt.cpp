@@ -42,7 +42,7 @@
 using namespace lbcrypto;
 
 class UTBFVRNS_DECRYPT : public ::testing::TestWithParam<std::tuple<usint, usint>> {
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

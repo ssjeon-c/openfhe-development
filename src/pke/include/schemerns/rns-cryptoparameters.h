@@ -57,7 +57,7 @@ namespace lbcrypto {
 class CryptoParametersRNS : public CryptoParametersRLWE<DCRTPoly> {
     using ParmType = typename DCRTPoly::Params;
 
-protected:
+public:
     CryptoParametersRNS()
         : CryptoParametersRLWE<DCRTPoly>(),
           m_ksTechnique(BV),
@@ -203,6 +203,7 @@ public:
         CryptoParametersBase<DCRTPoly>::PrintParameters(os);
     }
 
+public:
     /////////////////////////////////////
     // PrecomputeCRTTables
     /////////////////////////////////////
@@ -1346,7 +1347,7 @@ public:
         return m_MPIntBootCiphertextCompressionLevel;
     }
 
-protected:
+public:
     /////////////////////////////////////
     // PrecomputeCRTTables
     /////////////////////////////////////

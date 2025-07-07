@@ -588,7 +588,7 @@ public:
         return 1;
     }
 
-private:
+public:
     // m_data is a pointer to the vector
     IntegerType* m_data;
     // m_length stores the length of the vector

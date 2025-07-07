@@ -273,12 +273,12 @@ public:
         return ss.str();
     }
 
-private:
+public:
     std::vector<std::complex<double>> value;
 
     double m_logError = 0;
 
-protected:
+public:
     usint GetDefaultSlotSize() {
         auto batchSize = GetEncodingParams()->GetBatchSize();
         return (0 == batchSize) ? GetElementRingDimension() / 2 : batchSize;

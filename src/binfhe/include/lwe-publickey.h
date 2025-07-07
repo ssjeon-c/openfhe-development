@@ -123,7 +123,7 @@ public:
         return 1;
     }
 
-private:
+public:
     std::vector<NativeVector> m_A;
     NativeVector m_v;
 };

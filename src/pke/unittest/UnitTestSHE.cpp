@@ -433,7 +433,7 @@ static std::vector<TEST_CASE_UTGENERAL_SHE> testCases = {
 class UTGENERAL_SHE : public ::testing::TestWithParam<TEST_CASE_UTGENERAL_SHE> {
     using Element = DCRTPoly;
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

@@ -71,7 +71,7 @@ public:
    */
     VecType GenerateVector(const usint size, const typename VecType::Integer& modulus) const;
 
-private:
+public:
     static std::bernoulli_distribution m_distribution;
 };
 

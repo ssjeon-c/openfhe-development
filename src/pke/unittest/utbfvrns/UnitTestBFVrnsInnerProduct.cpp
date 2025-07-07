@@ -42,7 +42,7 @@ using namespace lbcrypto;
 
 namespace {
 class UTBFVRNS_INNERPRODUCT : public ::testing::Test {
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

@@ -174,7 +174,7 @@ public:
         return 1;
     }
 
-protected:
+public:
     explicit CryptoParametersBase(const PlaintextModulus& plaintextModulus) {
         m_encodingParams = std::make_shared<EncodingParamsImpl>(plaintextModulus);
     }
@@ -199,7 +199,7 @@ protected:
         out << "Encoding Parameters: " << *m_encodingParams << std::endl;
     }
 
-protected:
+public:
     // element-specific parameters
     std::shared_ptr<typename Element::Params> m_params;
 

@@ -292,7 +292,7 @@ class UTCKKSRNS_SCHEMESWITCH : public ::testing::TestWithParam<TEST_CASE_UTCKKSR
         return std::abs(std::log2(maxError));
     }
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

@@ -46,7 +46,7 @@
 using namespace lbcrypto;
 
 class UTLatticeParams : public ::testing::Test {
-protected:
+public:
     virtual void SetUp() {}
 
     virtual void TearDown() {

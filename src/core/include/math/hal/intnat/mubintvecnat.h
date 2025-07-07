@@ -119,7 +119,7 @@ bool operator!=(const NAlloc<T>&, const NAlloc<U>&) { return false; }
 template <class IntegerType>
 class NativeVectorT final : public lbcrypto::BigVectorInterface<NativeVectorT<IntegerType>, IntegerType>,
                             public lbcrypto::Serializable {
-private:
+public:
     // m_modulus stores the internal modulus of the vector.
     IntegerType m_modulus{0};
 

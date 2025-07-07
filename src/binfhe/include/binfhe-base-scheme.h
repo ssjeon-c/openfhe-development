@@ -188,7 +188,7 @@ public:
                                           const std::map<uint32_t, RingGSWBTKey>& EKs, ConstLWECiphertext& ct,
                                           const NativeInteger& beta) const;
 
-private:
+public:
     /**
    * Core bootstrapping operation
    *
@@ -231,7 +231,7 @@ private:
     LWECiphertext BootstrapFunc(const std::shared_ptr<BinFHECryptoParams>& params, const RingGSWBTKey& EK,
                                 ConstLWECiphertext& ct, const Func f, const NativeInteger& fmod) const;
 
-protected:
+public:
     std::shared_ptr<LWEEncryptionScheme> LWEscheme{std::make_shared<LWEEncryptionScheme>()};
     std::shared_ptr<RingGSWAccumulator> ACCscheme{nullptr};
 

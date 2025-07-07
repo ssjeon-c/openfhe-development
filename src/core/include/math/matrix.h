@@ -697,7 +697,7 @@ public:
         return 1;
     }
 
-private:
+public:
     data_t data;
     uint32_t rows;
     uint32_t cols;

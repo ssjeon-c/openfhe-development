@@ -228,7 +228,7 @@ static std::vector<TEST_CASE_UTGENERAL_FHEW> testCasesUTGENERAL_FHEW = {
 // clang-format on
 //===========================================================================================================
 class UTGENERAL_FHEW : public ::testing::TestWithParam<TEST_CASE_UTGENERAL_FHEW> {
-protected:
+public:
     void SetUp() {}
     void TearDown() {}
 

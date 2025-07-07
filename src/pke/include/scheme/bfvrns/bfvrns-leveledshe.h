@@ -139,7 +139,7 @@ public:
         return "LeveledSHEBFVRNS";
     }
 
-private:
+public:
     void RelinearizeCore(Ciphertext<DCRTPoly>& ciphertext, const EvalKey<DCRTPoly> evalKey) const;
 };
 }  // namespace lbcrypto

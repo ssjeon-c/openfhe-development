@@ -456,7 +456,7 @@ public:
    */
     const std::string ToString() const;
 
-protected:
+public:
     ~BigIntegerInterface() = default;
 
     // SERIALIZATION

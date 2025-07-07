@@ -175,7 +175,7 @@ class UTCKKSRNS_SER : public ::testing::TestWithParam<TEST_CASE_UTCKKSRNS_SER> {
     using Element    = DCRTPoly;
     const double eps = EPSILON;
 
-protected:
+public:
     void SetUp() {}
 
     void TearDown() {

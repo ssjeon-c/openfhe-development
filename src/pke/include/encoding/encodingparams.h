@@ -253,7 +253,7 @@ public:
         return !(*this == other);
     }
 
-private:
+public:
     std::ostream& doprint(std::ostream& out) const {
         out << "[p=" << m_plaintextModulus << " rootP =" << m_plaintextRootOfUnity << " bigP =" << m_plaintextBigModulus
             << " rootBigP =" << m_plaintextBigRootOfUnity << " g=" << m_plaintextGenerator << " L=" << m_batchSize

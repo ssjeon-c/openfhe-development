@@ -345,7 +345,7 @@ public:
         return 1;
     }
 
-private:
+public:
     std::ostream& doprint(std::ostream& out) const override {
         out << "ILDCRTParams ";
         ElemParams<IntType>::doprint(out);

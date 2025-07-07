@@ -354,7 +354,7 @@ public:
         return 1;
     }
 
-protected:
+public:
     Format m_format{Format::EVALUATION};
     std::shared_ptr<Params> m_params{nullptr};
     std::unique_ptr<VecType> m_values{nullptr};

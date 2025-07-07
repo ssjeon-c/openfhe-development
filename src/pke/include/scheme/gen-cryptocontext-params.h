@@ -169,7 +169,7 @@ class Params {
 
     void SetToDefaults(SCHEME scheme);
 
-protected:
+public:
     // How to disable a particular setter for a particular scheme and get an exception thrown if a user tries to call it:
     // 1. The set function should be declared virtual in this file
     // 2. The same function should be re-defined in the scheme-specific derived file using macros DISABLED_FOR_xxxxRNS defined below.

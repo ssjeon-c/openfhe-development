@@ -81,7 +81,7 @@ public:
    */
     std::shared_ptr<int32_t> GenerateIntVector(usint size, usint h = 0) const;
 
-private:
+public:
     static std::uniform_int_distribution<int> m_distribution;
 };
 

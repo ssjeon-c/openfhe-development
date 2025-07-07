@@ -45,7 +45,7 @@
 using namespace lbcrypto;
 
 class UTGENERAL_EVAL_MULT_MANY : public ::testing::Test {
-protected:
+public:
     virtual void SetUp() {}
 
     virtual void TearDown() {}
