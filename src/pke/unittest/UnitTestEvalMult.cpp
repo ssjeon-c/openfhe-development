@@ -325,12 +325,12 @@ public:
             // EvalMult Operation
             ////////////////////////////////////////////////////////////
             // Perform consecutive multiplications and do a keyswtiching at the end.
-            auto ciphertextMul12 = (INVALID_CIPHERTEXT_ERROR1 == testData.error) ?
-                                       cryptoContext->EvalMultNoRelin(nullptr, ciphertext2) :
-                                       cryptoContext->EvalMultNoRelin(ciphertext1, ciphertext2);
-            auto ciphertextMul123 = (INVALID_CIPHERTEXT_ERROR2 == testData.error) ?
-                                        cryptoContext->EvalMultNoRelin(ciphertextMul12, nullptr) :
-                                        cryptoContext->EvalMultNoRelin(ciphertextMul12, ciphertext3);
+            auto ciphertextMul12                  = (INVALID_CIPHERTEXT_ERROR1 == testData.error) ?
+                                                        cryptoContext->EvalMultNoRelin(nullptr, ciphertext2) :
+                                                        cryptoContext->EvalMultNoRelin(ciphertext1, ciphertext2);
+            auto ciphertextMul123                 = (INVALID_CIPHERTEXT_ERROR2 == testData.error) ?
+                                                        cryptoContext->EvalMultNoRelin(ciphertextMul12, nullptr) :
+                                                        cryptoContext->EvalMultNoRelin(ciphertextMul12, ciphertext3);
             Ciphertext<Element> ciphertextMul1234 = nullptr;
             if (INVALID_CIPHERTEXT_ERROR3 == testData.error)
                 ciphertextMul1234 = cryptoContext->EvalMultAndRelinearize(nullptr, ciphertext4);

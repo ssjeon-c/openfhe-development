@@ -5,6 +5,14 @@
 # all files named *.cpp are compiled to form the library
 file (GLOB_RECURSE PKE_SRC_FILES CONFIGURE_DEPENDS lib/*.cpp)
 
+# Hook headers inclusion
+list(APPEND PKE_INCLUDE_DIRS 
+		"${CMAKE_CURRENT_SOURCE_DIR}/../hook"
+		#"${CMAKE_CURRENT_SOURCE_DIR}/../core/include"
+		#"${CMAKE_CURRENT_SOURCE_DIR}/../pke/include"
+		#"${CMAKE_CURRENT_SOURCE_DIR}/../binfhe/include"
+)
+
 include_directories(${CORE_INCLUDE_DIRS})
 list(APPEND PKE_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/include")
 list(APPEND PKE_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/lib")
@@ -16,6 +24,7 @@ set(PKE_VERSION_PATCH ${OPENFHE_VERSION_PATCH})
 set(PKE_VERSION ${PKE_VERSION_MAJOR}.${PKE_VERSION_MINOR}.${PKE_VERSION_PATCH})
 
 add_library (pkeobj OBJECT ${PKE_SRC_FILES})
+add_dependencies(pkeobj OPENFHEhook_static) # Hook dependency
 set_property(TARGET pkeobj PROPERTY POSITION_INDEPENDENT_CODE 1)
 
 if( BUILD_SHARED )

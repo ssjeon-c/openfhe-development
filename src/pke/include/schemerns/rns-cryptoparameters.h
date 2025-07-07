@@ -203,7 +203,6 @@ public:
         CryptoParametersBase<DCRTPoly>::PrintParameters(os);
     }
 
-public:
     /////////////////////////////////////
     // PrecomputeCRTTables
     /////////////////////////////////////
